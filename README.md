@@ -1,6 +1,6 @@
 # Ejercicios sobre Python (2023)
 
-### Solicitar el ingreso de tres productos con sus respectivos precios. Mostrar una lista de los productos comprados y mostrar el subtotal de los productos adquiridos.
+### Solicitar el ingreso de tres productos con sus respectivos precios. Mostrar una lista de los productos comprados con sus respectivos precios y mostrar el subtotal de los productos adquiridos.
 
 ```python 
 product_name_1=input("¿Cual es la descripción del producto? ")
