@@ -70,5 +70,30 @@ while (hobby != 'bye'):
 print("Good Bye :"+username)
 
 ```
+### Armar un módulo denominado recommendation.py que contenga el siguiente código:
 
+```python
+def addSuggestion(hobby,hobbies):
+    hobbies.append(hobby)
+    if (hobby.upper()=="comer".upper()):
+        hobbies.append("Salir con amigos")
+    if (hobby.upper()=="beber".upper()):
+        hobbies.append("Ir a Bares")
+    if (hobby.upper()=="Aprender idiomas".upper()):
+        hobbies.append("Viajar")
+    if (hobby.upper()=="naturaleza".upper()):
+        hobbies.append("Actividad Fisica")
+        hobbies.append("Meditación")
+    if (hobby.upper()=="futbol".upper()):
+        hobbies.append("Ropa Deportiva")
+        hobbies.append("Ir a la cancha")
+    if (hobby.upper()=="cantar".upper()):
+        hobbies.append("ir al karaoke")
+    if (hobby.upper()=="estudiar".upper()):
+        hobbies.append("Jugar")
+    if (hobby.upper()=="autos".upper()):
+        hobbies.append("Me gusta el Heavy Metal")
+    return hobbies
+
+```
 
