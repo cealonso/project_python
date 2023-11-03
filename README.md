@@ -96,4 +96,25 @@ def addSuggestion(hobby,hobbies):
     return hobbies
 
 ```
+### Importar el modulo recommendation.py, solicitando el nombre del usuario y sus gustos. Listar sus gustos personales junto con las preferencias obtenidas en la función addSuggestion(). Luego armar una lista de distintos tipos de despedidas obtenidas de ChatGPT mostrándolas en forma aleatoria cuando el usuario decide despedirse de la aplicación.
 
+```python
+
+import recommendation as rec
+import random 
+
+hobbies=[]
+# Obtenidos de ChatGPT
+goodbyes=["Adiós", "Hasta luego", "Hasta la vista", "Nos vemos", "Chau", "Hasta pronto", "Hasta mañana", "Que tengas un buen día", "Cuidate"]
+username=input('¿Cúal es tu nombre? ')
+hobby=""
+
+while (hobby != 'bye'): 
+    hobby=input("¿Dime algún gusto tuyo, (bye es la despedida) "+ username + "? ") 
+    if (hobby=='bye'):
+        break
+    hobbies=rec.addSuggestion(hobby,hobbies)
+    print(hobbies)
+print(random.choice(goodbyes)+" "+username)
+
+```
