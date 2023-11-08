@@ -118,3 +118,18 @@ while (hobby != 'bye'):
 print(random.choice(goodbyes)+" "+username)
 
 ```
+
+### Realizar una función denominada evenNumber() que permita a través de una lista de números devolver una lista con solo los números pares. Realizar una comprobación mediante assert para verificar si la función devuelve lo que se espera que devuelva.
+
+```python
+
+def evenNumbers(lst_numbers,lst_evens):
+    for aux in lst_numbers:
+        if (aux%2)==0:
+            lst_evens.append(aux)
+    return lst_evens
+
+assert evenNumbers([8,5,3,21,4],[])==[8,4]
+
+```
+
