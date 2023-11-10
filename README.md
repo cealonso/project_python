@@ -152,6 +152,25 @@ assert fizzBuzz([8,5,3,21,15,4],[])==[8,"Buzz","Fizz","Fizz","FizzBuzz",4]
 
 ```
 
+### Escribir un programa que dado los primeros cien números imprima por pantalla la palabra “Fizz” si es múltiplos de 3, imprima “Buzz” si es múltiplo de 5 y en el caso de que sea múltiplo de 3 y de 5 la palabra “FizzBuzz”.
+
+```python
+
+def fizzBuzz2():
+    for i in range(1, 100):
+        if ((i % 3 == 0) and (i % 5 == 0)):
+            print ('FizzBuzz')
+        elif (i % 3) == 0:
+            print ('Fizz')
+        elif (i % 5) == 0:
+            print ('Buzz')
+        else:
+            print (i)
+
+fizzBuzz2()
+
+```
+
 ### Escribir una función que dada una lista de cosas (Por ejemplo, una lista de frutas) busque un elemento en dicha  lista y cuente las cantidades de apariciones de dicho elemento en la lista.
 
 ```python
