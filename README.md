@@ -132,4 +132,22 @@ def evenNumbers(lst_numbers,lst_evens):
 assert evenNumbers([8,5,3,21,4],[])==[8,4]
 
 ```
+### Escribir un programa que dado una lista de números reemplace en una nueva lista los múltiplos de 3 por la palabra “Fizz”, los múltiplos de 5 por “Buzz” y los múltiplos de ambos, es decir, los múltiplos de 3 y 5 por la palabra “FizzBuzz”.
 
+```python
+
+def fizzBuzz(lst_numbers,lst_fizzbuzz):
+    for aux in lst_numbers:
+        if ((aux%3==0) and (aux%5==0)):
+            lst_fizzbuzz.append("FizzBuzz")
+        elif (aux%5)==0:
+            lst_fizzbuzz.append("Buzz")
+        elif (aux%3==0):
+            lst_fizzbuzz.append("Fizz")
+        else:
+            lst_fizzbuzz.append(aux)
+    return lst_fizzbuzz
+
+assert fizzBuzz([8,5,3,21,15,4],[])==[8,"Buzz","Fizz","Fizz","FizzBuzz",4]
+
+```
