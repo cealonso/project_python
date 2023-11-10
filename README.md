@@ -151,3 +151,18 @@ def fizzBuzz(lst_numbers,lst_fizzbuzz):
 assert fizzBuzz([8,5,3,21,15,4],[])==[8,"Buzz","Fizz","Fizz","FizzBuzz",4]
 
 ```
+
+### Escribir una función que dada una lista de cosas (Por ejemplo, una lista de frutas) busque un elemento en dicha  lista y cuente las cantidades de apariciones de dicho elemento en la lista.
+
+```python
+
+def findThings(lst_fruits,fruit):
+    count=0
+    for aux in lst_fruits:
+        if aux==fruit:
+            count=count+1
+    return count   
+
+assert findThings(["Banana","Anana","Pera","Manzana","Banana"],"Banana")==2
+
+```
