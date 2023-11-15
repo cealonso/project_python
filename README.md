@@ -185,3 +185,31 @@ def findThings(lst_fruits,fruit):
 assert findThings(["Banana","Anana","Pera","Manzana","Banana"],"Banana")==2
 
 ```
+
+### Crear una aplicación que permita almacenar en un archivo denominado tareas.txt distintas tareas ingresadas por teclado. La cantidad de tareas debe ser solicitado tambien en la entrada. Cada tarea tiene una prioridad definido por un color: Rojo (Prioridad Alta), Amarillo (Prioridad Intermedia) y Verde (Prioridad Baja) que debe también ser solicitado por la aplicación. Según el Color ingresado la aplicación deberá convertir el color en una texto que indique tipo de prioridad es y almacenarlo también el archivo tareas.txt.
+
+```python
+from datetime import date
+
+def get_priority(colour):
+    if (colour=="Rojo"):
+        priority="Importante"
+    elif (colour=="Amarillo"):
+        priority="Prioridad Intermedia"
+    else:
+        priority="Baja Prioridad"
+    return priority
+
+count=int(input("La cantidad de Eventos que quiero agendar : "))
+file=open("tareas.txt","w",encoding="utf8")
+today = str(date.today())
+file.write(today+'\n')
+for i in range(count):
+    new_element=input("Que querés agendar? : ") #Se repite las count veces
+    new_priority=input("Prioridad (Rojo, Amarillo, Verde) : ") 
+    add_priority=get_priority(new_priority)
+    file.write(new_element+'\t')
+    file.write(add_priority+'\n')
+file.close()
+
+```
