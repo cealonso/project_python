@@ -213,3 +213,39 @@ for i in range(count):
 file.close()
 
 ```
+### Usar la librería Requests de Python para realizar solicitudes HTTP para obtener el dólar oficial del servidor https://dolarapi.com
+
+```python
+
+import requests
+response = requests.get("https://dolarapi.com/v1/dolares/oficial")
+dolar=response.json()
+print("Compra USD Oficial : ", dolar['compra'])
+print("Venta USD Oficial : ",dolar['venta'])
+
+```
+### Realizar una función con la sucesión de Fibonacci. La sucesión de Fibonacci es una sucesión infinita de números naturales que comienza con los números 0 y 1, y a partir de estos cada uno de los nuevos términos se calcula como la suma de los dos anteriores. Ejemplo: 0,1,1,2,3,5,8,13,21,34,55, ... 
+
+```python
+
+def fibonacci(x):
+    # first two terms
+    n1=0
+    n2=1
+    sum = n1 + n2
+    print(n1)
+    print(n2)
+    print(sum)
+    count=3
+    while (count<x):
+        n1 = n2
+        n2 = sum
+        sum = n1 + n2
+        print(sum)
+        count=count+1
+val=15
+fibonacci(val)
+
+```
+
+
