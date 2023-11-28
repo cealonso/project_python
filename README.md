@@ -262,7 +262,6 @@ data = {
 df = pd.DataFrame(data)
 print(df) 
 print("Popularity of Programming Language: ",df.Share.sum())
-df.to_csv('file_name.csv',encoding='utf-8', index=False)
 x = df.Language
 y = df.Share
 plt.scatter(x, y, color = 'hotpink')
