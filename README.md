@@ -247,5 +247,32 @@ val=15
 fibonacci(val)
 
 ```
+### Crear una aplicación que obtenga la suma de los datos usados en un dataframe (los datos son obtenidos del sitio https://pypl.github.io/PYPL.html que contiene el uso de los lenguajes de programación más usados en 2023) Obtener una visualización grafica de dichos datos usando la librería matplotlib.
+
+```python
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+  "Language": ['Python', 'Java', 'JavaScript','C/C++','C#','PHP','R','TypeScript','Swift','Objective-C','Rust'],
+  "Share": [27.99, 15.91, 9.18,6.76,6.67,4.86,4.45,2.95,2.7,2.32,1.98],
+  "1-year trend":[0,-0.8,-0.3,0.2,-0.3,-0.3,0.4,0.1,0.6,0.2,0.3]
+}
+df = pd.DataFrame(data)
+print(df) 
+print("Popularity of Programming Language: ",df.Share.sum())
+df.to_csv('file_name.csv',encoding='utf-8', index=False)
+x = df.Language
+y = df.Share
+plt.scatter(x, y, color = 'hotpink')
+plt.title('Popularity of Programming Language (2023)') 
+plt.xlabel('Lenguaje', size=12)
+plt.ylabel('Uso', size=12)
+plt.legend(['Porcentaje de Uso'], loc='upper right')
+plt.show()
+
+
+```
 
 
