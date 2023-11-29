@@ -247,7 +247,7 @@ val=15
 fibonacci(val)
 
 ```
-### Crear una aplicación que obtenga la suma de los datos usados en un dataframe (los datos son obtenidos del sitio https://pypl.github.io/PYPL.html que contiene el uso de los lenguajes de programación más usados en 2023) Obtener una visualización grafica de dichos datos usando la librería matplotlib.
+### Crear una aplicación que obtenga la suma de los datos usados en un dataframe (los datos son obtenidos del sitio https://pypl.github.io/PYPL.html que contiene el uso de los lenguajes de programación más usados en el 2023) Obtener una visualización grafica de dichos datos usando la librería matplotlib.
 
 ```python
 
