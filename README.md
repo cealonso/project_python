@@ -273,5 +273,77 @@ plt.show()
 
 
 ```
+###Desarrollar una calculadora sencilla que permita realizar las cuatro operaciones básicas: Suma, Resta, Multiplicación y División mediante el uso de una interfaz gráfica (GUI) para ello debe usar la librería grafica tkinter.
 
+
+```python
+
+from tkinter import *
+import tkinter.messagebox
+
+def sum():
+   num1=float(box1.get())
+   num2=float(box2.get())
+   total=num1+num2
+   tkinter.messagebox.showinfo("Mensaje","El resultado es: %.2f"%total)
+   box1.delete(0,20)
+   box2.delete(0,20)
+
+def subtraction():
+   num1=float(box1.get())
+   num2=float(box2.get())
+   total=num1-num2
+   tkinter.messagebox.showinfo("Mensaje","El resultado es: %.2f"%total)
+   box1.delete(0,20)
+   box2.delete(0,20)
+
+def multiplication():
+   num1=float(box1.get())
+   num2=float(box2.get())
+   total=num1*num2
+   tkinter.messagebox.showinfo("Mensaje","El resultado es: %.2f"%total)
+   box1.delete(0,20)
+   box2.delete(0,20)
+
+def division():
+   num1=float(box1.get())
+   num2=float(box2.get())
+   total=num1/num2
+   tkinter.messagebox.showinfo("Mensaje","El resultado es: %.2f"%total)
+   box1.delete(0,20)
+   box2.delete(0,20)
+
+#Creacion de la GUI
+gui = Tk()
+#Titulo del GUI
+gui.title("Calculadora")
+gui.geometry("400x250+500+300")
+var1 = StringVar()
+var1.set("Escribe el primer numero:")
+lblnum1 = Label(gui,textvariable=var1,height = 2)
+lblnum1.pack()
+num1=StringVar()
+box1=Entry(gui,bd=4,textvariable=num1)
+box1.pack()
+var2 = StringVar()
+var2.set("Escribe el segundo numero:")
+lblnum2 = Label(gui,textvariable=var2,height = 2)
+lblnum2.pack()
+num2=StringVar()
+box2=Entry(gui,bd=4,textvariable=num2)
+box2.pack()
+btnSum = Button(gui, text = "Suma", command = sum,width=15)
+btnSum.pack()
+btnSub = Button(gui, text = "Resta", command = subtraction,width=15)
+btnSub.pack()
+btnMul = Button(gui, text = "Multiplicacion", command = multiplication,width=15)
+btnMul.pack()
+btnDiv = Button(gui, text = "Division", command = division,width=15)
+btnDiv.pack()
+
+#Cargar la GUI
+gui.mainloop()
+
+
+```
 
