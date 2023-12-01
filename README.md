@@ -273,7 +273,7 @@ plt.show()
 
 
 ```
-###Desarrollar una calculadora sencilla que permita realizar las cuatro operaciones básicas: Suma, Resta, Multiplicación y División mediante el uso de una interfaz gráfica (GUI) para ello debe usar la librería grafica tkinter de Python.
+### Desarrollar una calculadora sencilla que permita realizar las cuatro operaciones básicas: Suma, Resta, Multiplicación y División mediante el uso de una interfaz gráfica (GUI) para ello debe usar la librería grafica tkinter de Python.
 
 
 ```python
